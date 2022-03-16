@@ -6,26 +6,21 @@ function todoList() {
   var items = document.getElementById("items");
   var addBtn = document.getElementById("addBtn");
 
-  var count = 0;
-
   addBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    items.innerHTML = text.value;
+    items.innerHTML = text.value + `<br/>`;
     todo.push(items.innerHTML);
     console.log(todo);
     localStorage.setItem("key", JSON.stringify(todo));
-    count++;
   });
 
-  //for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key("key");
-    if (localStorage.getItem(key) == null) {
-      todo = [];
-    } else {
-      todo = JSON.parse(localStorage.getItem("key"));
-      items.innerHTML += `${todo}<br />`;
-    }
-  //}
+  if (localStorage.getItem("key") == null) {
+    todo = [];
+  } else {
+    todo = JSON.parse(localStorage.getItem("key"));
+    items.innerHTML += `${todo} <br />`;
+    console.log(items);
+  }
 }
 
 todoList();
