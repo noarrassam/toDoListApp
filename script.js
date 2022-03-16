@@ -1,36 +1,31 @@
+var todo = [];
 function todoList() {
-  var todo = [
-    {
-      item: "",
-    },
-  ];
-
-  var add = document.getElementById("add");
-  add.placeholder = "I need to...";
+  var text = document.getElementById("text");
+  text.placeholder = "I need to...";
 
   var items = document.getElementById("items");
+  var addBtn = document.getElementById("addBtn");
 
-  var delt = document.getElementById("delete");
-  delt.innerHTML = "Complete";
+  var count = 0;
 
-  add.addEventListener("keyup", function (e) {
-    if (e.keyCode === 13) {
-      items.innerHTML = add.value;
-      todo.push({ item: items.innerHTML });
-      console.log(todo);
-      let todoList = JSON.stringify(todo);
-      console.log(todoList);
-      localStorage.setItem("key", todoList);
-      let getItem = localStorage.getItem("key");
-      console.log(getItem);
-      let parsedObj = JSON.parse(getItem);
-      console.log(parsedObj);
-    }
-
-    for (const [key, value] of Object.entries(localStorage)) {
-      console.log(key, value);
-    }
+  addBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    items.innerHTML += text.value + `<br />`;
+    todo.push(items.innerHTML);
+    console.log(todo);
+    localStorage.setItem("key", JSON.stringify(todo));
+    count++;
   });
+
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    if (localStorage.getItem(key) == null) {
+      todo = [];
+    } else {
+      todo = JSON.parse(localStorage.getItem(key));
+      items.innerHTML += `${key} ${todo}<br />`;
+    }
+  }
 }
 
 todoList();
