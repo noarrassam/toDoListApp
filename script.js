@@ -27,8 +27,18 @@ function getStorage() {
       li.appendChild(text);
       li.appendChild(delt);
       document.getElementById("items").appendChild(li);
+      delt.addEventListener("click", (i) => deleteTask(i));
     });
   }
 }
 
+function deleteTask(i) {
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    console.log(key);
+  }
+  //localStorage.removeItem(key);
+}
+
 getStorage();
+//deleteTask();
