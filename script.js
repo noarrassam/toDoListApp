@@ -2,12 +2,11 @@ var todo = [];
 
 var addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", todoList);
-var delt;
 function todoList() {
-  var items = document.createElement("li");
+  var items = document.createElement("p");
   var text = document.getElementById("text").value;
   items.innerHTML = text;
-
+  items.id = "item1";
   todo.push(items.innerHTML);
   console.log(todo);
   localStorage.setItem("key", JSON.stringify(todo));
@@ -19,9 +18,13 @@ function getStorage() {
     todo = [];
   } else {
     todo = JSON.parse(localStorage.getItem("key"));
+    let count = document.getElementById("count");
+    count.innerHTML = "Todo Count: " + todo.length;
     todo.forEach((item) => {
       var li = document.createElement("li");
-      delt = document.createElement("button");
+      li.id = "li";
+      var delt = document.createElement("button");
+      delt.id = "deleteBtn";
       delt.textContent = "Completed ";
       var text = document.createTextNode(item);
       li.appendChild(text);
