@@ -22,8 +22,9 @@ It's an application that let users to add specific task to a list. Also, a user 
 
 ## **Adding a Task**
 
-![![MCQs]()](https://github.com/noarrassam/toDoListApp/blob/main/images/2.png)
+![![Adding]()](https://github.com/noarrassam/toDoListApp/blob/main/images/2.png)
+![![Added]()](https://github.com/noarrassam/toDoListApp/blob/main/images/3.png
 
 ## **Deleting a Task**
 
-![![Score]()](https://github.com/noarrassam/toDoListApp/blob/main/images/3.png)
+)
