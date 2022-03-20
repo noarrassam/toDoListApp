@@ -27,4 +27,3 @@ It's an application that let users to add specific task to a list. Also, a user 
 
 ## **Deleting a Task**
 
-)
