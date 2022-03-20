@@ -16,27 +16,14 @@ It's an application that let users to add specific task to a list. Also, a user 
 
 - Localstorage
 
-## **Start Assessment**
+## **Tasks**
 
-![![Start]()](https://github.com/noarrassam/CodingAssessment/blob/master/images/1.png)
-![![Start]()](https://github.com/noarrassam/CodingAssessment/blob/master/images/7.png)
+![![Tasks]()](https://github.com/noarrassam/toDoListApp/blob/main/images/1.png)
 
-## **MCQs**
+## **Adding a Task**
 
-![![MCQs]()](https://github.com/noarrassam/CodingAssessment/blob/master/images/2.png)
+![![MCQs]()](https://github.com/noarrassam/toDoListApp/blob/main/images/2.png)
 
-## **Wrong Answer Alert**
+## **Deleting a Task**
 
-![![Score]()](https://github.com/noarrassam/CodingAssessment/blob/master/images/3.png)
-
-## **Correct Answer Alert**
-
-![![Portfolio]()](https://github.com/noarrassam/CodingAssessment/blob/master/images/4.png)
-
-## **Alert Message**
-
-![![Portfolio]()](https://github.com/noarrassam/CodingAssessment/blob/master/images/6.png)
-
-## **Final Score**
-
-![![Portfolio]()](https://github.com/noarrassam/CodingAssessment/blob/master/images/5.png)
+![![Score]()](https://github.com/noarrassam/toDoListApp/blob/main/images/3.png)
