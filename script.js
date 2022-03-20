@@ -3,10 +3,9 @@ var todo = [];
 var addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", todoList);
 function todoList() {
-  var items = document.createElement("p");
+  var items = document.createElement("li");
   var text = document.getElementById("text").value;
   items.innerHTML = text;
-  items.id = "item1";
   todo.push(items.innerHTML);
   console.log(todo);
   localStorage.setItem("key", JSON.stringify(todo));
