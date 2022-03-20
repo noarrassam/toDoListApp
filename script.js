@@ -36,8 +36,8 @@ function getStorage() {
   }
 }
 
-function deleteTask(i) {
-  todo.splice(i, 1);
+function deleteTask(index) {
+  todo.splice(index, 1);
   localStorage.setItem("key", JSON.stringify(todo));
   location.reload();
 }
