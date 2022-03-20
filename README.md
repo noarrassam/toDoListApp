@@ -4,7 +4,7 @@
 
 ## Description
 
-It's an application that let users to add specific task to a list. Also, a user can delete a task after complation by clicking on complete button.
+It's an application that let users to add specific task to a list. Also, a user can delete a task after completion by clicking on complete button.
 
 ## Used
 
