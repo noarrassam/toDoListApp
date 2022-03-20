@@ -2,9 +2,8 @@ var todo = [];
 
 var addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", todoList);
-var delt;
 function todoList() {
-  var items = document.createElement("li");
+  var items = document.createElement("p");
   var text = document.getElementById("text");
   if (text.value.trim() != 0) {
     items.innerHTML = text.value;
@@ -22,23 +21,22 @@ function getStorage() {
     todo = JSON.parse(localStorage.getItem("key"));
     let count = document.getElementById("count");
     count.innerHTML = "Todo Count: " + todo.length;
-    todo.forEach((item) => {
+    todo.forEach((item, index) => {
       var li = document.createElement("li");
       li.id = "li";
-      delt = document.createElement("button");
+      var delt = document.createElement("button");
       delt.id = "deleteBtn";
       delt.textContent = "Completed ";
       var text = document.createTextNode(item);
       li.appendChild(text);
       li.appendChild(delt);
       document.getElementById("items").appendChild(li);
-      delt.addEventListener("click", (i) => deleteTask(i));
+      delt.addEventListener("click", () => deleteTask(index));
     });
   }
 }
 
 function deleteTask(i) {
-  let localstrgs = localStorage.getItem("key");
   todo.splice(i, 1);
   localStorage.setItem("key", JSON.stringify(todo));
   location.reload();
