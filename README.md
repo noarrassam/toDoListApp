@@ -25,5 +25,6 @@ It's an application that let users to add specific task to a list. Also, a user 
 ![![Adding]()](https://github.com/noarrassam/toDoListApp/blob/main/images/2.png)
 ![![Added]()](https://github.com/noarrassam/toDoListApp/blob/main/images/3.png)
 
-## **Deleting a Task**
+## **Deleted Task**
 
+![![Deleted Task]()](https://github.com/noarrassam/toDoListApp/blob/main/images/4.png)
